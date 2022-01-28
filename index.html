@@ -34,7 +34,7 @@
                         <i class="pe-2" :class="task.done ? 'fas fa-check-square' : 'far fa-square'"></i>
                         <span :class="{'text-decoration-line-through': task.done}">{{ task.text }}</span>
                      </div>
-                     <i class="fas fa-times-circle" @click="deleteTask(index)"></i>
+                     <i class="fas fa-times-circle ms-5" @click="deleteTask(index)"></i>
                   </li>
                </ul>
             </div>
