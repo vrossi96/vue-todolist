@@ -18,9 +18,13 @@
 <body>
    <div id="root">
       <div class="container">
-         <div class="row">
+         <div class="row pt-5">
+            <!-- Lista delle task -->
             <div class="col-8 offset-2">
-               <!-- Lista delle task -->
+               <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Inserisci una nuova attività!">
+                  <button class="btn btn-outline-secondary" type="button">Aggiungi</button>
+               </div>
                <ul class="list-group">
                   <li v-for="(task, index) in tasks"
                      class="list-group-item d-flex justify-content-between align-items-center">
