@@ -17,7 +17,16 @@
 
 <body>
    <div id="root">
-
+      <div class="container">
+         <div class="row">
+            <div class="col-8 offset-2">
+               <ul class="list-group">
+                  <li v-for="(task, index) in tasks" :class="{'text-decoration-line-through': task.done}"
+                     class="list-group-item">{{ task.text }}</li>
+               </ul>
+            </div>
+         </div>
+      </div>
    </div>
    <script src="js/script.js"></script>
 </body>
