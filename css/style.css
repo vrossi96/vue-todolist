@@ -4,9 +4,23 @@ li > * {
 li > i:hover {
    color: red;
 }
-.fa-check-square {
+li .fa-check-square {
    color: green;
 }
 .done {
    background-color: rgba(0, 128, 0, 0.1);
+}
+.btn-secondary {
+   color: #000;
+   background-color: #b9d5f9;
+   border-color: #b9d5f9;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+   color: #000;
+   background-color: #b9c5f9;
+   border-color: #b9c5f9;
+}
+.btn-secondary:focus {
+   box-shadow: 0 0 0 0.25rem rgb(185, 213, 249);
 }
