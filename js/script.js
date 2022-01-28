@@ -47,15 +47,21 @@ const root = new Vue({
       },
 
       addNewTask() {
+         const newerTask = this.taskToAdd.trim();
          // Create empty object for array
          const newtask = {
-            text: this.taskToAdd,
+            text: newerTask,
             done: false,
          };
-         // Use spread to add new object to the array
-         const newTasks = [...this.tasks, newtask];
-         // Reassign the array with the new object
-         this.tasks = newTasks;
+
+         if (newerTask) {
+            // Use spread to add new object to the array
+            const newTasks = [...this.tasks, newtask];
+            // Reassign the array with the new object
+            this.tasks = newTasks;
+         }
+
+         this.taskToAdd = "";
       },
    },
 });
