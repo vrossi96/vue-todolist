@@ -21,8 +21,11 @@
          <div class="row">
             <div class="col-8 offset-2">
                <ul class="list-group">
-                  <li v-for="(task, index) in tasks" :class="{'text-decoration-line-through': task.done}"
-                     class="list-group-item">{{ task.text }}</li>
+                  <li v-for="(task, index) in tasks"
+                     class="list-group-item d-flex justify-content-between align-items-center">
+                     <div :class="{'text-decoration-line-through': task.done}">{{ task.text }}</div>
+                     <i class="fas fa-times-circle"></i>
+                  </li>
                </ul>
             </div>
          </div>

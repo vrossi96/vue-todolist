@@ -1,0 +1,6 @@
+li > i {
+   cursor: pointer;
+}
+li > i:hover {
+   color: red;
+}
