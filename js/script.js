@@ -38,5 +38,12 @@ const root = new Vue({
          },
       ],
    },
-   methods: {},
+   methods: {
+      deleteTask(index) {
+         const newTasks = this.tasks.filter((task, i) => {
+            if (index !== i) return true;
+         });
+         this.tasks = newTasks;
+      },
+   },
 });
