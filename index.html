@@ -21,7 +21,7 @@
          <div class="row pt-5">
             <div class="col-8 offset-2">
                <!-- Input and new task button -->
-               <div class="input-group mb-3">
+               <div id="input-new-task" class="input-group">
                   <input type="text" class="form-control" placeholder="Inserisci una nuova attività!"
                      v-model="taskToAdd" @keyup.enter="addNewTask">
                   <button class="btn btn-outline-primary" type="button" @click="addNewTask">Aggiungi</button>
@@ -29,9 +29,11 @@
                <!-- Buttons -->
                <div id="button-container" class="d-flex justify-content-between">
                   <div class="btn-group">
-                     <button type="button" class="btn btn-success"><i class="fas fa-check-square pe-2"></i>Completa
+                     <button type="button" class="btn btn-success" @click="checkAll(true)"><i
+                           class="fas fa-check-square pe-2"></i>Completa
                         tutti</button>
-                     <button type="button" class="btn btn-secondary"><i class="far fa-square pe-2"></i>Reimposta come
+                     <button type="button" class="btn btn-secondary" @click="checkAll(false)"><i
+                           class="far fa-square pe-2"></i>Reimposta come
                         'da
                         completare'</button>
                   </div>

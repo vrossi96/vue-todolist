@@ -36,6 +36,14 @@ const root = new Vue({
             text: "Finire il libro",
             done: false,
          },
+         {
+            text: "Grattare il formaggio",
+            done: false,
+         },
+         {
+            text: "Tagliare la legna",
+            done: false,
+         },
       ],
    },
    methods: {
@@ -72,6 +80,14 @@ const root = new Vue({
       taskCheck(index) {
          const newTasks = this.tasks.map((task, i) => {
             if (i === index) task.done = !task.done;
+            return task;
+         });
+         this.tasks = newTasks;
+      },
+
+      checkAll(status) {
+         const newTasks = this.tasks.map((task) => {
+            task.done = status;
             return task;
          });
          this.tasks = newTasks;
