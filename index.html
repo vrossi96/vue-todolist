@@ -24,7 +24,7 @@
                <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Inserisci una nuova attività!"
                      v-model="taskToAdd" @keyup.enter="addNewTask">
-                  <button class="btn btn-outline-secondary" type="button" @click="addNewTask">Aggiungi</button>
+                  <button class="btn btn-outline-primary" type="button" @click="addNewTask">Aggiungi</button>
                </div>
                <!-- Buttons -->
                <div id="button-container" class="d-flex justify-content-between">
@@ -35,7 +35,8 @@
                         'da
                         completare'</button>
                   </div>
-                  <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt pe-2"></i>Rimuovi
+                  <button type="button" class="btn btn-danger" @click="removeAllTasks"><i
+                        class="fas fa-trash-alt pe-2"></i>Rimuovi
                      tutto</button>
                </div>
                <!-- Tasks list -->

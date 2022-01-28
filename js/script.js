@@ -46,6 +46,11 @@ const root = new Vue({
          this.tasks = newTasks;
       },
 
+      removeAllTasks() {
+         const emptyTasks = [];
+         this.tasks = emptyTasks;
+      },
+
       addNewTask() {
          const newerTask = this.taskToAdd.trim();
          // Create empty object for array
