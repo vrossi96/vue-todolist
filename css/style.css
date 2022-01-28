@@ -45,3 +45,21 @@ li .fa-check-square {
    border-top-left-radius: 0;
    border-top-right-radius: 0;
 }
+
+h1 > i {
+   animation: bouncing 1s infinite;
+}
+
+@keyframes bouncing {
+   0% {
+      transform: translateY(-45px);
+   }
+
+   50% {
+      transform: translateY(0px);
+   }
+
+   100% {
+      transform: translateY(-45px);
+   }
+}
