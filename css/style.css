@@ -1,4 +1,5 @@
-li > i {
+li > i,
+li > div {
    cursor: pointer;
 }
 li > i:hover {

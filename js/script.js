@@ -63,5 +63,13 @@ const root = new Vue({
 
          this.taskToAdd = "";
       },
+
+      taskCheck(index) {
+         const newTasks = this.tasks.map((task, i) => {
+            if (i === index) task.done = !task.done;
+            return task;
+         });
+         this.tasks = newTasks;
+      },
    },
 });

@@ -30,7 +30,8 @@
                <ul class="list-group">
                   <li v-for="(task, index) in tasks"
                      class="list-group-item d-flex justify-content-between align-items-center">
-                     <div :class="{'text-decoration-line-through': task.done}">{{ task.text }}</div>
+                     <div :class="{'text-decoration-line-through': task.done}" @click="taskCheck(index)">{{ task.text }}
+                     </div>
                      <i class="fas fa-times-circle" @click="deleteTask(index)"></i>
                   </li>
                </ul>
