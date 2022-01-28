@@ -23,7 +23,7 @@
                <!-- Input e tasto nuova task -->
                <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Inserisci una nuova attività!"
-                     v-model="taskToAdd">
+                     v-model="taskToAdd" @keyup.enter="addNewTask">
                   <button class="btn btn-outline-secondary" type="button" @click="addNewTask">Aggiungi</button>
                </div>
                <!-- Lista delle task -->
