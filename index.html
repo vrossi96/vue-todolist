@@ -19,12 +19,14 @@
    <div id="root">
       <div class="container">
          <div class="row pt-5">
-            <!-- Lista delle task -->
             <div class="col-8 offset-2">
+               <!-- Input e tasto nuova task -->
                <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Inserisci una nuova attività!">
-                  <button class="btn btn-outline-secondary" type="button">Aggiungi</button>
+                  <input type="text" class="form-control" placeholder="Inserisci una nuova attività!"
+                     v-model="taskToAdd">
+                  <button class="btn btn-outline-secondary" type="button" @click="addNewTask">Aggiungi</button>
                </div>
+               <!-- Lista delle task -->
                <ul class="list-group">
                   <li v-for="(task, index) in tasks"
                      class="list-group-item d-flex justify-content-between align-items-center">
