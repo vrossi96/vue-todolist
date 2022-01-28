@@ -1,7 +1,12 @@
-li > i,
-li > div {
+li > * {
    cursor: pointer;
 }
 li > i:hover {
    color: red;
+}
+.fa-check-square {
+   color: green;
+}
+.done {
+   background-color: rgba(0, 128, 0, 0.1);
 }
